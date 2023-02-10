@@ -7,7 +7,7 @@
 > - var (`Permite que o seu valor seja variavel, reatribuido varias vezes, assim como o seu nome`)
 > - let (`Não permite que seja criada uma variavel com o mesmo nome que ja foi declarada`)
 > - const (`É imutavel, não pode ter o valor alterado tem o valor constante FIXO! `)
-
+---
 ### **Declaração de variaveis**
 
 > Você pode declarar variaveis de varias formas porem tem regras que precisam ser seguidas também, vamos ver abaixo as possibildiades de declaração de variaveis:
