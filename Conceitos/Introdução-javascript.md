@@ -25,3 +25,4 @@
 ### **Browser Evergreen**
 
 > - Atualização automática (Chrome por exemplo)
+---
