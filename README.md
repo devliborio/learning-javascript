@@ -1,4 +1,4 @@
-# Aprendizagem com Node.JS
+# Aprendizagem com JS
 
 É um repositorio feito exclusivamente para armazenar minha progressão com a linguagem de programação JavaScript, conforme eu tiver desafios, linhas de aprendizados irei armazenar nesse repositorio como documentação para minha evolução com está linguagem.
 
