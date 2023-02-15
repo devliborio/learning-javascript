@@ -19,6 +19,5 @@ var jsonReduzido = { // **  Isso só funciona com var, let e const, se tentar pa
     idade,
     empresa,
 }
-
 console.log("MEU JSON REDUZIDO ABAIXO: ")
 console.log(jsonReduzido);
