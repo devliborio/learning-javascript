@@ -11,7 +11,7 @@ let empresa = {
     email: "email@teste.com"
 }
 
-let carro = {
+let carroVelho = {
     marca: marca,
     modelo: modelo,
     valor: valor,
@@ -33,7 +33,6 @@ let carroNovo = {
     marca,
     modelo,
     valor,
-    
     // ** O operador spread é representado pelos 3 pontos
     ...empresa // Ele diz que quer copiar os campos do objeto empresa e colar no objeto carro novo  !
 }
