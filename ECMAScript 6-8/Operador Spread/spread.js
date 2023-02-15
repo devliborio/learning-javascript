@@ -12,9 +12,9 @@ let empresa = {
 }
 
 let carro = {
-    marca,
-    modelo,
-    valor,
+    marca: marca,
+    modelo: modelo,
+    valor: valor,
 
     // ! Pegando dados de um outro objeto da meneira antiga
     nomeDaEmpresa: empresa.nome,
