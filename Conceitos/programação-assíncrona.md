@@ -15,3 +15,11 @@
 > Então podemos entender que diferente da `sync` a `async` **NÃO É BLOQUEANTE!**
 >
 > Porem nem tudo pode ser `async`, ainda que a programação `async` tenha seus beneficios, ainda precisa ter uma ordem para que não ocorra um resutlado inesperado no seu programa, então o ideal é ter uma mescla entre por exemplo funções `async` e `sync` no seu código.
+---
+
+### **3 principais formas de trabalhar com programação (Async)**
+
+> - Async / Await 
+> - Promise 
+> - CallBacks
+
