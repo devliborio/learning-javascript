@@ -1,4 +1,4 @@
-// ! Entendendo como trabalhar com Programação Async com callbacks
+// ! Entendendo como funciona a Programação Async na pratica
 
 // Vamos utilizar o setTimeout para simular um tempo de espera pois vamos trabalhar com simulações de envio de emails 
 
