@@ -1,13 +1,13 @@
 // Eu
 let nome = "Guilherme Libório Machado";
-let sobre = "Desenvolvedor Full Stack";
+let prof = "Desenvolvedor Full Stack";
 
 //Better i'm better 
 let tL = "Template Literals";
 let better = "MELHOR!!";
 
 // Concatenação de uma maneira muito manual e anti-pratica
-let frase = "Olá meu nome é " + nome + " e eu sou " + sobre + ".";
+let frase = "Olá meu nome é " + nome + " e eu sou " + prof + ".";
 console.log(frase);
 
 console.log(" ");
