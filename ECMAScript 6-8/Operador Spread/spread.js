@@ -22,7 +22,7 @@ let carroVelho = {
     emailDaEmpresa: empresa.email,
     siteDaEmpresa: empresa.site
 }
-console.log(carro)
+console.log(carroVelho)
 
 
 
