@@ -22,6 +22,8 @@
 ### **3 principais formas de trabalhar com programação (Async)**
 
 > - Async / Await -> <a href=""> Veja mais </a>
-> - Promise -> <a href=""> Veja mais </a>
+>
+> - Promise -> <a href="https://github.com/devliborio/learning-javascript/blob/master/Programa%C3%A3o%20Async%20(Pratica)/promisse.js"> Veja mais </a>
+>
 > - CallBacks -> <a href="https://github.com/devliborio/learning-javascript/blob/master/Programa%C3%A3o%20Async%20(Pratica)/callbacks.js"> Veja mais</a>
 
