@@ -48,14 +48,14 @@ function enviarOutroEmail(corpo, para) {
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
-            
+
             var error = false;
 
             if (error == false) {
-                resolve({time: 5, to: "sophiaventin@gmail.com", setor: "inteligencia", corpo: "Oi esse email é urgente, corra pra minha sala!"}); // ** Na promise os parâmetros são diferentes dos callbacks, aqui no caso podemos passar apenas 1 parâmetro, mas COMO VAMOS PASSAR VARIOS DADOS SE QUISERMOS? Bom use o json que isso solucionará seus problemas, como eu fiz nesse exemplo!
+                resolve({ time: 5, to: "sophiaventin@gmail.com", setor: "inteligencia", corpo: "Oi esse email é urgente, corra pra minha sala!" }); // ** Na promise os parâmetros são diferentes dos callbacks, aqui no caso podemos passar apenas 1 parâmetro, mas COMO VAMOS PASSAR VARIOS DADOS SE QUISERMOS? Bom use o json que isso solucionará seus problemas, como eu fiz nesse exemplo!
 
             } else {
-                reject({error: "Deu um erro feiao!"});
+                reject({ error: "Deu um erro feiao!" });
 
             }
 
@@ -64,7 +64,7 @@ function enviarOutroEmail(corpo, para) {
 }
 
 // Output
-enviarOutroEmail("Oi esse é outro email.").then((json) => {
+/* enviarOutroEmail("Oi esse é outro email.").then((json) => {
 
     console.log(`
     
@@ -80,7 +80,76 @@ enviarOutroEmail("Oi esse é outro email.").then((json) => {
     console.log(reject.error);
 
 });
-
+    */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // ! PROMISES ANINHADAS E PROMISE HELL
+
+function pegarId() {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            var error = false;
+
+            if (!error) {
+                resolve(5);
+
+            } else {
+                reject("Não foi possivel pegar o ID!");
+
+            }
+        }, 1500);
+    });
+}
+
+function buscarNoBanco(id) {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            var error = false;
+
+            if (!error) {
+                resolve("liborio.ofc@gmail.com.br");
+            } else {
+                reject("Não foi possivel salvar no banco de dados!");
+            }
+
+        }, 2000);
+    });
+}
+
+function enviarMaisUmEmail(corpo, para) {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            var error = false;
+
+            if (!error) {
+                resolve(console.log(`
+
+                Corpo: ${corpo}
+                Para:  ${para}
+
+                `));
+            } else {
+                reject("Não foi possivel enviar o e-mail");
+            }
+
+        }, 3000)
+    });
+}
+
+// Output
+
+// Promisses Aninhadas!
+pegarId().then((id) => {
+
+    buscarNoBanco(id).then((email) => {
+        enviarMaisUmEmail("Esse é o corpo do email!!!", email).then(() => {
+
+            console.log(`Email enviado para usuario com id: ${id}`);
+
+        }).catch(err => console.log(err));
+    }).catch(err => console.log(err));
+}).catch(err => console.log(err));
