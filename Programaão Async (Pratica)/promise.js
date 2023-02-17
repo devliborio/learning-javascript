@@ -83,7 +83,7 @@ function enviarOutroEmail(corpo, para) {
     */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// ! PROMISES ANINHADAS E PROMISE HELL
+// ! PROMISES ANINHADAS OU PROMISE HELL
 
 function pegarId() {
     return new Promise((resolve, reject) => {
@@ -142,7 +142,7 @@ function enviarMaisUmEmail(corpo, para) {
 
 // Output
 
-// Promisses Aninhadas!
+// Promises Aninhadas que viram promises hell!
 pegarId().then((id) => {
 
     buscarNoBanco(id).then((email) => {
