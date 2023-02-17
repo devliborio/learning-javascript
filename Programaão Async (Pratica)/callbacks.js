@@ -108,7 +108,7 @@ errorTest("mensagem do teste enviada!", "desenvolvimento", (time, erro) => {
 
     // Tratamento de erro parte 2
     if (erro == undefined) {
-        console.log(`Teste concluido, tempo de execução: ${time}s`);
+        console.log(`Teste concluído, tempo de execução: ${time}s`);
     } else {
         console.log(`Ocorreu um erro: ${erro}, tempo de execução: ${time}`);
     }
