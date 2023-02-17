@@ -16,18 +16,18 @@ function sendEmail(msg, to, callback) {
 
         `)
 
-        callback(); // Esse terceiro paramêtro basicamente é uma função que ao ser chamada no output pode incluir tudo o que você quer que seja executado depois do "envio" do e-mail por exemplo.
+        callback(); // Esse terceiro parâmetro basicamente é uma função que ao ser chamada no output pode incluir tudo o que você quer que seja executado depois do "envio" do e-mail por exemplo.
     }, 3000);
 }
 
 // Output
 
 console.log("Seu e-mail está sendo enviado, deve chegar em alguns segundos!");
-sendEmail("Olá só estou fazendo um teste de callback com programaçao async", "usuarioteste@gmail.com", () => {
+sendEmail("Olá só estou fazendo um teste de callback com programação async", "usuarioteste@gmail.com", () => {
 
     console.log("Email enviado, verifique a caixa de entrada!");
 
-}); // percecba que aqui eu defino o callback como o terceiro parâmetro logo, tudo que estiver dentro dessa função sera executado depois do "envio" do e-email
+}); // perceba que aqui eu defino o callback como o terceiro parâmetro logo, tudo que estiver dentro dessa função sera executado depois do "envio" do e-email
 
 
 // ** //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,7 +73,7 @@ sendEmail2("Usando parâmetros no callback", "callback@teste.com", "gui", (statu
 
     `);
 
-}); // Então deu pra entender que conseguimos passar parãmetros dinamicamente direto de uma função async para o callback.
+}); // Então deu pra entender que conseguimos passar parâmetros dinamicamente direto de uma função async para o callback.
 
 
 
