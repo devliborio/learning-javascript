@@ -30,7 +30,7 @@ function pegarDados() {
             var agente = {
                 name: "Guilherme Libório Machado",
                 idade: 21,
-                empresa: "Microsoft" 
+                empresa: "Microsoft"
             }
 
             if (!erro) {
@@ -87,13 +87,13 @@ principal();
 // ! TRATATIVAS DE ERRO COM ASYNC / AWAIT
 
 // ** Para travar erros com eles você vai usar o ( try{ ..logica }catch(erro){ ...deu erro } )
-async function main(){
+async function main() {
 
-    try{
+    try {
         var user = await pegarDados();
         console.log(user);
 
-    } catch(erro){
+    } catch (erro) {
         console.log(erro);
 
     }
