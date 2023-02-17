@@ -2,6 +2,7 @@
 
 class Jogo{
 
+    // Atributos
     constructor(){
         this.titulo="Elden ring",
         this.genero = "Souls like",
@@ -10,7 +11,6 @@ class Jogo{
     }
 
     // Métodos
-
     Abrir(){
         console.log("Jogo abrindo")
     }
