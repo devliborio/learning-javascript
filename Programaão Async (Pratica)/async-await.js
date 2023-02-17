@@ -92,6 +92,7 @@ async function main(){
     try{
         var user = await pegarDados();
         console.log(user);
+
     } catch(erro){
         console.log(erro);
 
