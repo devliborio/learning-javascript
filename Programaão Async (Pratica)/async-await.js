@@ -7,15 +7,41 @@
 function pegarUsuarios() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-
-            resolve([
-                { name: "Bill", lang: "C" },
-                { name: "Mark", lang: "JS" },
-                { name: "Steve", lang: "Cobol" }
-            ]);
+            var err = false;
+            if (!err) {
+                resolve([
+                    { name: "Bill", lang: "C" },
+                    { name: "Mark", lang: "JS" },
+                    { name: "Steve", lang: "Cobol" }
+                ]);
+            } else {
+                reject("Ocorreu um erro no processo, tente novamente!")
+            }
 
         }, 3000);
     });
+}
+
+function pegarDados() {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            var erro = false;
+            var agente = {
+                name: "Guilherme Libório Machado",
+                idade: 21,
+                empresa: "Microsoft" 
+            }
+
+            if (!erro) {
+                resolve(agente);
+            } else {
+                reject("Ocorreu um erro, que triste.");
+            }
+
+        }, 3000)
+
+    })
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -40,10 +66,15 @@ function pegarUsuarios() {
 // ! Para evitar a situação acima de promises aninhadas e confusas podemos usar o AWAIT!
 // ** O await significa esperar, esperar uma promise!
 
-async function principal(){
+async function principal() {
 
-    var usuarios = await pegarUsuarios(); // Aqui ele diz "Oh javascrpt, eu quero que você espere a promise carregar eme retorne, você pode usar tanto sem atribuir esse retorno a uma variavel como também pode atribuir, nesse exemplo irei atribuir!" OBS: essa linha de código é exatamente a mesma coisa que o codigo que vimos acima do modelo padrão.
-    console.log(usuarios);
+    try {
+        var usuarios = await pegarUsuarios(); // Aqui ele diz "Oh javascrpt, eu quero que você espere a promise carregar eme retorne, você pode usar tanto sem atribuir esse retorno a uma variavel como também pode atribuir, nesse exemplo irei atribuir!" OBS: essa linha de código é exatamente a mesma coisa que o codigo que vimos acima do modelo padrão.
+        console.log(usuarios);
+    } catch (erro) {
+        console.log(erro);
+    }
+
 
     // ** Parece ser mil maravilhas usar o await e aync porem ele meio que bloqueia o fluxo do seu program, então por exemplo não é tão recomendado usar ele em um envio de e-mail. Então basicamente async / await é uma maneira de você escrever código assincrino com o estilo sincrono.
 }
@@ -51,3 +82,20 @@ async function principal(){
 // Output
 principal();
 
+/* -------------------------------------------------------------------------------------------- */
+
+// ! TRATATIVAS DE ERRO COM ASYNC / AWAIT
+
+// ** Para travar erros com eles você vai usar o ( try{ ..logica }catch(erro){ ...deu erro } )
+async function main(){
+
+    try{
+        var user = await pegarDados();
+        console.log(user);
+    } catch(erro){
+        console.log(erro);
+
+    }
+}
+
+main()
