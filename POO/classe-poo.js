@@ -1,25 +1,31 @@
 // ** Estrutura de uma classe em POO
 
-class Jogo{
+class Filme {
 
-    // Atributos
-    constructor(){
-        this.titulo="Elden ring",
-        this.genero = "Souls like",
-        this.produtora = "From Software",
-        this.preco = "R$ 249,00"
+    constructor() {
+        this.titulo = '',
+        this.ano = 0,
+        this.genero = '',
+        this.diretor = '',
+        this.atores = [];
+        this.duracao = 0
+
     }
 
-    // Métodos
-    Abrir(){
-        console.log("Jogo abrindo")
+    Reproduzir() {
+        console.log("reproduzindo...");
     }
 
-    Carregar(){
-        console.log("Carregando...")
+    Pauser() {
+        console.log("Pausado ||");
     }
 
-    Fechar(){
-        console.log("Aperte ESC para fechar...")
+    Avançar() {
+        console.log("Avançar >>");
     }
+
+    Fechar() {
+        console.log("Fechar X");
+    }
+
 }
