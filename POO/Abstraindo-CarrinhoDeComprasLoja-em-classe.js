@@ -15,7 +15,7 @@ class CarrinhoDeCompras{
         console.log('Comprando...');
     }
 
-    Excluir(){
-        console.log('Excluindo...');
+    Retirar(){
+        console.log('retirando do carrinho');
     }
 }
