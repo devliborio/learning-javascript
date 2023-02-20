@@ -44,7 +44,7 @@
 >
 > **Obs: Métodos são basicamente funções onde dentro do corpo do método você realiza uma determina ação designada para aquele método.**
 >
-> Para um exemplo de classe no código <a href="">clique aqui</a>
+> Para um exemplo de classe no código <a href="https://github.com/devliborio/learning-javascript/blob/master/POO/Estrutura%20de%20uma%20classe/estrutura-classe.js">clique aqui</a>
 ---
 ### **Entendendo um dos pilares mais importantes do POO (Abstração)**
 
