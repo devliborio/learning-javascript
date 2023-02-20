@@ -53,7 +53,3 @@
 > Basicamente visualizar alguma coisa e retirar somente o essencial para que você ainda possa entender essa coisa.
 >
 > Por exemplo uma arvore, você não precisa ver cada detalhe de uma arvore para saber que é uma arvore, você pode ver coisas como tronco, galhos e folhas e já entender que isso é um arvore, o fato de você simplificar o entendimento de um conceito complexo, pode ser definido como abstração.
-
-
-
-
