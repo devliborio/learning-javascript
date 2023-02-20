@@ -1,6 +1,6 @@
 // ! Entendendo Async / Await na programação async (Medida para solucionar as promises (hell / aninhada) ).
 
-// ** O async / await é uma forma de se trabalhar com promises onde você não precisa trabalhar com then() e o catch() e com isso já podemos perceber que já resolve o problema do promise hell, só que nem sempre podemos usar o async/ await. ela é mais usada para receber dados de outra promise, por exemplo uma promise retorna uma lista de usuarios do banco de dados, essa promise retorna uma lista, então nessa situação você usa async / await.
+// ** O async / await é uma forma de se trabalhar com promises onde você não precisa trabalhar com then() e o catch() e com isso já podemos perceber que já resolve o problema do promise hell, só que nem sempre podemos usar o async/ await. ela é mais usada para receber dados de outra promise, por exemplo uma promise retorna uma lista de usuários do banco de dados, essa promise retorna uma lista, então nessa situação você usa async / await.
 
 /* -------------------------------------------------------------------------------------------- */
 
@@ -49,17 +49,17 @@ function pegarDados() {
 // ! Não é possivel pegar os dados de uma promisse dessa forma abaixo:
 // var usuarios = pegarUsuarios();
 // console.log(usuarios);
-// ** Perceba que eu executar isso console simulando um atraso de 3 segundos para pegar esses usuarios ele retorna que a promise está pendente, e não sairá disso.
+// ** Perceba que eu executar isso console simulando um atraso de 3 segundos para pegar esses usuários ele retorna que a promise está pendente, e não sairá disso.
 
 /* -------------------------------------------------------------------------------------------- */
 
-// ** O modelo padrão de pegar os dados de uma promisse é usar o then(), assim por exemplo:
+// ** O modelo padrão de pegar os dados de uma promise é usar o then(), assim por exemplo:
 
 // pegarUsuarios().then((usuarios) => { 
 //    console.log(usuarios);
 // });
 
-//** Entretando é exatamente isso que gera o promise hell, pois pegaos um dado, passamos pra outra promise e passamos pra outra e assim vái, até ficar realmente um hell. */
+//** Entretanto é exatamente isso que gera o promise hell, pois pegamos um dado, passamos pra outra promise e passamos pra outra e assim vái, até ficar realmente um hell. */
 
 /* -------------------------------------------------------------------------------------------- */
 
@@ -69,14 +69,14 @@ function pegarDados() {
 async function principal() {
 
     try {
-        var usuarios = await pegarUsuarios(); // Aqui ele diz "Oh javascrpt, eu quero que você espere a promise carregar eme retorne, você pode usar tanto sem atribuir esse retorno a uma variavel como também pode atribuir, nesse exemplo irei atribuir!" OBS: essa linha de código é exatamente a mesma coisa que o codigo que vimos acima do modelo padrão.
+        var usuarios = await pegarUsuarios(); // Aqui ele diz "Oh javascript, eu quero que você espere a promise carregar eme retorne, você pode usar tanto sem atribuir esse retorno a uma variável como também pode atribuir, nesse exemplo irei atribuir!" OBS: essa linha de código é exatamente a mesma coisa que o código que vimos acima do modelo padrão.
         console.log(usuarios);
     } catch (erro) {
         console.log(erro);
     }
 
 
-    // ** Parece ser mil maravilhas usar o await e aync porem ele meio que bloqueia o fluxo do seu program, então por exemplo não é tão recomendado usar ele em um envio de e-mail. Então basicamente async / await é uma maneira de você escrever código assincrino com o estilo sincrono.
+    // ** Parece ser mil maravilhas usar o await e async porem ele meio que bloqueia o fluxo do seu program, então por exemplo não é tão recomendado usar ele em um envio de e-mail. Então basicamente async / await é uma maneira de você escrever código assíncrono com o estilo síncrono.
 }
 
 // Output
